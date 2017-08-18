@@ -14,7 +14,7 @@ shinyServer(function(input, output) {
                       group=Parti,
                       text=paste("Parti: ", Parti,"<br>Mätmånadens början: ", Månad,"<br>Stöd: ", Stöd, " (",Undre," - ",Övre,")", sep="")))+
   geom_point()+
-  geom_errorbar(width=15)+
+  geom_ribbon(alpha=0.35)+
     geom_line()+
   scale_y_continuous(limits=c(0,NA))+
   scale_color_manual(
